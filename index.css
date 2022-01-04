@@ -1,0 +1,484 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  text-align: center;
+  /* background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  ); */
+  background-color: #191919;
+  color: #3099af;
+}
+h2 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* preloader start */
+
+.container-pre-loader {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+}
+
+.preloader {
+  width: 70px;
+  height: 70px;
+  border: 10px solid #3099af;
+  border-top: 10px solid #666;
+  border-radius: 50%;
+  animation-name: girar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* position: absolute; */
+  top: 40vh;
+}
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hide {
+  display: none;
+}
+/* preloader end */
+
+/* start navbar */
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #191919;
+  position: relative;
+  transition: all 0.5s ease;
+  z-index: 9999;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+img {
+  width: 50px;
+  height: 50px;
+}
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  position: relative;
+  right: 20%;
+  filter: invert(52%) sepia(77%) saturate(405%) hue-rotate(143deg)
+    brightness(86%) contrast(86%);
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #3099af;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+.is-fixed {
+  position: fixed;
+  width: 100%;
+  transform: translateY(0);
+  background-color: #3099af;
+  transition: all 0.5s ease;
+}
+
+.is-fixed > .nav-links > a {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.is-fixed > .nav-header > .nav-title {
+  filter: invert(0%) sepia(4%) saturate(7489%) hue-rotate(22deg)
+    brightness(103%) contrast(100%);
+}
+
+/* end navbar */
+/* start responsive navbar */
+
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .nav > .nav-header > .nav-title {
+    right: 8rem;
+  }
+}
+/* end responsive navbar */
+
+/* START HEADER */
+h1 {
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 48px;
+}
+p {
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #333333;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.inner-header {
+  height: 80vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.waves {
+  /* position: relative; */
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+
+span.typed-text {
+  font-weight: normal;
+}
+span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+
+/* END HEADER */
+
+/* SKILLS START */
+
+.skills-title {
+  height: 20vh;
+  text-align: center;
+  background-color: #191919;
+  font-size: 24px;
+}
+.skill-item {
+  margin: 0 auto;
+  width: 20%;
+  height: 20%;
+  padding: 0;
+  margin: 0 20px;
+}
+
+.skill-item > img {
+  width: 100%;
+  /* height: 10%; */
+}
+
+.background-skill-item-github {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(149deg)
+    brightness(110%) contrast(112%);
+  z-index: -1;
+}
+/* SKILSS END */
+
+/* PROJECTS START */
+
+.carrousel-z-index {
+  z-index: -1;
+}
+
+.item-text-corrousel {
+  background-color: #303030;
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  padding: 20px;
+}
+.btn-demo {
+  margin-top: 10px;
+  padding: 10px;
+  display: inline-block;
+  right: 30%;
+  color: #3099af;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* .main-carousel {} */
+
+.item-img-corrousel {
+  margin-bottom: 10px;
+}
+
+.item-img-corrousel > img {
+  width: 100px;
+  height: 100px;
+}
+
+/* PROJECTS END */
+
+/* ABOUT ME START */
+.container-about-me {
+  width: 90%;
+  height: 300px;
+  background: #bdc3c7;
+  margin: 0 auto 20px auto;
+  transform: skewY(-3deg);
+  overflow: hidden;
+  padding: 10px;
+  background-color: #333333;
+  border-radius: 5px;
+}
+
+.container-about-me > div {
+  width: 50%;
+}
+/* .profile-about-me {
+  margin-top: 30px;
+} */
+
+.profile-about-me > img {
+  width: 250px;
+  height: 250px;
+}
+
+@media screen and (max-width: 600px) {
+  .container-about-me > div {
+    width: 100%;
+  }
+  .container-about-me {
+    height: auto;
+  }
+}
+/* ABOUT ME END */
+
+/* FORM CONTACT START*/
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #333333;
+  border-radius: 5px;
+}
+form,
+input,
+textarea,
+button {
+  font-family: inherit;
+  font-size: initial;
+}
+.form-group label {
+  display: block;
+  margin: 2rem 0 0.5rem 0;
+}
+.form-group input[type='text'],
+.form-group input[type='email'],
+.form-group textarea {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: 0;
+  transition: border 0.15s;
+}
+.form-group input[type='text'],
+.form-group input[type='email'] {
+  height: 3rem;
+}
+.form-group textarea {
+  resize: vertical;
+}
+.submit {
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  background: #3099af;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+i {
+  margin-right: 0.5rem;
+}
+.submit:hover {
+  background: rgba(173, 216, 230, 1);
+}
+.form-group input[type='text']:focus,
+.form-group input[type='email']:focus,
+.form-group textarea:focus {
+  border: 1px solid #222;
+}
+
+@media screen and (min-width: 576px) {
+  .wrapper {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 55%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .wrapper {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    width: 35%;
+  }
+}
+
+/* FORM CONTACT END */
+
+/* class was removed that collided with navbar */
+.animate__animated {
+  -webkit-animation-fill-mode: none !important;
+  animation-fill-mode: none !important;
+}
