@@ -3,7 +3,7 @@ const typedTextSpan = document.querySelector('.typed-text');
 const cursorSpan = document.querySelector('.cursor');
 
 const textArray = ['BACKEND DEVELOPER', 'FRONTEND DEVELOPER', 'WEB DEVELOPER'];
-const typingDelay = 200;
+const typingDelay = 150;
 const erasingDelay = 100;
 const newTextDelay = 2000;
 let textArrayIndex = 0;
@@ -72,7 +72,6 @@ document.getElementsByClassName('nav-btn')[0].addEventListener('click', () => {
       .getElementsByClassName('main-carousel')[0]
       .classList.contains('carrousel-z-index')
   ) {
-    console.log('object');
     document
       .getElementsByClassName('main-carousel')[0]
       .classList.remove('carrousel-z-index');
@@ -92,4 +91,14 @@ const flkty = new Flickity(elem, {
   cellAlign: 'left',
   contain: true,
   wrapAround: true,
+});
+
+// hide navbar
+
+// ;
+
+document.querySelectorAll("a[href^='#']").forEach((link) => {
+  link.addEventListener('click', function (e) {
+    document.getElementById('nav-check').checked = false;
+  });
 });

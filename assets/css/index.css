@@ -11,6 +11,7 @@ body {
   ); */
   background-color: #191919;
   color: #3099af;
+  letter-spacing: 0.1rem;
 }
 h2 {
   font-weight: bold;
@@ -164,6 +165,7 @@ img {
   .nav > .nav-links > a {
     display: block;
     width: 100%;
+    color: #3099af;
   }
   .nav > #nav-check:not(:checked) ~ .nav-links {
     height: 0px;
@@ -314,6 +316,7 @@ span.cursor.typing {
 
 .skill-item > img {
   width: 100%;
+  margin: 0.8rem 0 0.8rem 0;
   /* height: 10%; */
 }
 
@@ -356,16 +359,17 @@ span.cursor.typing {
   margin-bottom: 10px;
 }
 
-.item-img-corrousel > img {
-  width: 100px;
-  height: 100px;
+.paragraph-carrousel {
+  text-align: center;
+  color: #3099af;
+  font-size: 18px;
 }
 
 /* PROJECTS END */
 
 /* ABOUT ME START */
 .container-about-me {
-  width: 90%;
+  width: 85%;
   height: 300px;
   background: #bdc3c7;
   margin: 0 auto 20px auto;
@@ -387,7 +391,9 @@ span.cursor.typing {
   width: 250px;
   height: 250px;
 }
-
+.text-about-me {
+  text-align: justify;
+}
 @media screen and (max-width: 600px) {
   .container-about-me > div {
     width: 100%;
@@ -417,6 +423,7 @@ button {
 .form-group label {
   display: block;
   margin: 2rem 0 0.5rem 0;
+  text-align: left;
 }
 .form-group input[type='text'],
 .form-group input[type='email'],
