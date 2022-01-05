@@ -93,12 +93,37 @@ const flkty = new Flickity(elem, {
   wrapAround: true,
 });
 
-// hide navbar
-
-// ;
-
 document.querySelectorAll("a[href^='#']").forEach((link) => {
   link.addEventListener('click', function (e) {
     document.getElementById('nav-check').checked = false;
   });
+});
+
+// send email
+
+document.getElementById('sendEmail').addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const confirmSend = confirm('Are you sure you want to send this email?');
+
+  if (!confirmSend) return;
+
+  emailjs
+    .sendForm(
+      'service_tw5q45k',
+      'template_cblcswh',
+      '#formContact',
+      'user_1bmg5PhCOzl3TTsAUAlmg'
+    )
+    .then(
+      function (response) {
+        // console.log('SUCCESS!', response.status, response.text);
+        alert('Email sent successfully!');
+        document.getElementById('formContact').reset();
+      },
+      function (error) {
+        console.log('FAILED...', error);
+        // alert('Email sending failed!');
+      }
+    );
 });

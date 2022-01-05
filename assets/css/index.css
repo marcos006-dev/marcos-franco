@@ -128,7 +128,7 @@ img {
 /* end navbar */
 /* start responsive navbar */
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
@@ -175,9 +175,10 @@ img {
     overflow-y: auto;
   }
   .nav > .nav-header > .nav-title {
-    right: 8rem;
+    right: 40%;
   }
 }
+
 /* end responsive navbar */
 
 /* START HEADER */
