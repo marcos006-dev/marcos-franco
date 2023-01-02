@@ -76,7 +76,7 @@ img {
   font-size: 22px;
   color: #fff;
   position: relative;
-  right: 20%;
+  right: 10%;
   filter: invert(52%) sepia(77%) saturate(405%) hue-rotate(143deg)
     brightness(86%) contrast(86%);
 }
@@ -88,7 +88,7 @@ img {
 .nav > .nav-links {
   display: inline;
   float: right;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .nav > .nav-links > a {
@@ -391,6 +391,7 @@ span.cursor.typing {
 .profile-about-me > img {
   width: 250px;
   height: 250px;
+  border-radius: 50%;
 }
 .text-about-me {
   text-align: justify;
@@ -485,8 +486,52 @@ i {
 
 /* FORM CONTACT END */
 
+.site-footer {
+  background-color: #3099af;
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+#social-wrapper {
+  text-align: center;
+}
+
+/*Social Media Icons*/
+.social-wrapper {
+  text-align: center;
+}
+
+.social-wrapper ul li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.sites-icons {
+  margin-top: 0.625em;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+  border-radius: 25px;
+}
+
+.sites-icons:hover {
+  opacity: 1;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+.footer-nav p {
+  text-align: center;
+}
+
 /* class was removed that collided with navbar */
 .animate__animated {
   -webkit-animation-fill-mode: none !important;
   animation-fill-mode: none !important;
+}
+
+.image-carrousel {
+  width: 90%;
+  height: 20%;
 }
