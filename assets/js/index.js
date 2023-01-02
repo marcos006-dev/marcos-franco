@@ -67,55 +67,55 @@ function stickyElement(e) {
 }
 window.addEventListener('scroll', stickyElement);
 
-document.getElementsByClassName('nav-btn')[0].addEventListener('click', () => {
-  if (
-    document
-      .getElementsByClassName('main-carousel-projects')[0]
-      .classList.contains('carrousel-z-index')
-  ) {
-    document
-      .getElementsByClassName('main-carousel-projects')[0]
-      .classList.remove('carrousel-z-index');
-  } else {
-    document
-      .getElementsByClassName('main-carousel-projects')[0]
-      .classList.add('carrousel-z-index');
-  }
-});
+// document.getElementsByClassName('nav-btn')[0].addEventListener('click', () => {
+//   if (
+//     document
+//       .getElementsByClassName('main-carousel-projects')[0]
+//       .classList.contains('carrousel-z-index')
+//   ) {
+//     document
+//       .getElementsByClassName('main-carousel-projects')[0]
+//       .classList.remove('carrousel-z-index');
+//   } else {
+//     document
+//       .getElementsByClassName('main-carousel-projects')[0]
+//       .classList.add('carrousel-z-index');
+//   }
+// });
 
-// carrousel
-const elemProjects = document.querySelector('.main-carousel-projects');
-new Flickity(elemProjects, {
-  // options
-  cellAlign: 'left',
-  contain: true,
-  wrapAround: true,
-});
+// // carrousel
+// const elemProjects = document.querySelector('.main-carousel-projects');
+// new Flickity(elemProjects, {
+//   // options
+//   cellAlign: 'left',
+//   contain: true,
+//   wrapAround: true,
+// });
 
-document.getElementsByClassName('nav-btn')[0].addEventListener('click', () => {
-  if (
-    document
-      .getElementsByClassName('main-carousel-achievements')[0]
-      .classList.contains('carrousel-z-index')
-  ) {
-    document
-      .getElementsByClassName('main-carousel-achievements')[0]
-      .classList.remove('carrousel-z-index');
-  } else {
-    document
-      .getElementsByClassName('main-carousel-achievements')[0]
-      .classList.add('carrousel-z-index');
-  }
-});
+// document.getElementsByClassName('nav-btn')[0].addEventListener('click', () => {
+//   if (
+//     document
+//       .getElementsByClassName('main-carousel-achievements')[0]
+//       .classList.contains('carrousel-z-index')
+//   ) {
+//     document
+//       .getElementsByClassName('main-carousel-achievements')[0]
+//       .classList.remove('carrousel-z-index');
+//   } else {
+//     document
+//       .getElementsByClassName('main-carousel-achievements')[0]
+//       .classList.add('carrousel-z-index');
+//   }
+// });
 
-// carrousel
-const elemAchievements = document.querySelector('.main-carousel-achievements');
-new Flickity(elemAchievements, {
-  // options
-  cellAlign: 'left',
-  contain: true,
-  wrapAround: true,
-});
+// // carrousel
+// const elemAchievements = document.querySelector('.main-carousel-achievements');
+// new Flickity(elemAchievements, {
+//   // options
+//   cellAlign: 'left',
+//   contain: true,
+//   wrapAround: true,
+// });
 
 document.querySelectorAll("a[href^='#']").forEach((link) => {
   link.addEventListener('click', function (e) {
